@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kalkulator</title>
+    <style>
+        .tombol{
+            background-color: hotpink;
+        }
+        .tabel{
+            background-color: lawngreen;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form name="kalkulator">
+        <table style="background-color: " class="tabel">
+            <caption>kalkulator</caption>
+            <tr>
+                <td>angka 1</td><td>:</td><td><input type="number" name="angka1"></td>
+            </tr>
+            <tr>
+                <td>angka 2</td><td>:</td><td><input type="number" name="angka2"></td>
+            </tr>
+            <tr>
+                <td>hasil</td><td>:</td><td><input type="number" name="hasil"></td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center">
+                    <input class="tombol" type="button" onclick="tambah()"value=" + ">
+                    <input class="tombol" type="button" onclick="kurang()"value=" - ">
+                    <input class="tombol" type="button" onclick="kali()"value=" * ">
+                    <input class="tombol" type="button" onclick="bagi()"value=" / ">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        let nama = window.prompt("Hola namamu siapa ?");
+        document.write('Hai ' +nama+', masukkan hanya 2 angka ya, selamat berhitung! ').innerthtml= pengguna;
+
+        function tambah(){
+            let angka1=Number(document.kalkulator.angka1.value);
+            let angka2=Number(document.kalkulator.angka2.value);
+            let hasil=angka1+angka2;
+            document.kalkulator.hasil.value=hasil;
+        }
+        function kurang(){
+            let angka1=Number(document.kalkulator.angka1.value);
+            let angka2=Number(document.kalkulator.angka2.value);
+            let hasil=angka1-angka2;
+            document.kalkulator.hasil.value=hasil;
+        }
+        function kali(){
+            let angka1=Number(document.kalkulator.angka1.value);
+            let angka2=Number(document.kalkulator.angka2.value);
+            let hasil=angka1*angka2;
+            document.kalkulator.hasil.value=hasil;
+        }
+        function bagi(){
+            let angka1=Number(document.kalkulator.angka1.value);
+            let angka2=Number(document.kalkulator.angka2.value);
+            let hasil=angka1/angka2;
+            document.kalkulator.hasil.value=hasil;
+        }
+        
+    </script>
+</body>
+</html>
